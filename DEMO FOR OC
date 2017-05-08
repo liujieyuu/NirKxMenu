@@ -1,0 +1,31 @@
+DEMO FOR OC
+>>
+  self.datas = @[
+                   [KxMenuItem menuItem:@"冻结电子钥匙" image:[UIImage imageNamed:@"freeze_img"] target:self action:@selector(dongjiedianziyaoshi)],
+                   [KxMenuItem menuItem:@"删除电子钥匙" image:[UIImage imageNamed:@"delete_img"] target:self action:@selector(shanchuyaoshi)],
+                   [KxMenuItem menuItem:@"授权权限" image:[UIImage imageNamed:@"Authorization_img"] target:self action:@selector(shouquanquanxian)],
+                   [KxMenuItem menuItem:@"重命名" image:[UIImage imageNamed:@"img_rename"] target:self action:@selector(chongmingming)],
+                   [KxMenuItem menuItem:@"修改有效期" image:[UIImage imageNamed:@"modification_date_img"] target:self action:@selector(xiugaiyouxiaoqi)]];
+                   [KxMenu setTitleFont:[UIFont systemFontOfSize:15]];
+                    OptionalConfiguration opt ;
+    Color colo;
+    colo.B = 0.0;
+    colo.R = 0.0;
+    colo.G = 0.0;
+    opt.marginXSpacing = 7;
+    opt.marginYSpacing = 9;
+    opt.textColor = colo;
+    
+    Color colo2;
+    colo2.R = 1;
+    colo2.G = 1;
+    colo2.B = 1;
+    opt.menuBackgroundColor = colo2;
+    opt.menuCornerRadius = 6;
+    opt.arrowSize = 6;
+    opt.intervalSpacing = 15;
+    opt.maskToBackground = NO;
+    opt.shadowOfMenu = YES;
+    opt.hasSeperatorLine = YES;
+    
+            [KxMenu showMenuInView:btn  fromRect:CGRectMake(0, 0, 120, 120) menuItems:self.datas withOptions:opt];
